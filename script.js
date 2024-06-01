@@ -1,6 +1,7 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const learnMoreButton = document.getElementById('learn-more');
-    learnMoreButton.addEventListener('click', () => {
-        alert('Gracias por tu interés. Próximamente más información.');
-    });
+// scripts.js
+
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert('Your message has been sent successfully!');
+    this.reset();
 });
