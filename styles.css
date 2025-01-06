@@ -29,7 +29,7 @@ header {
     border: none;
 }
 footer {
-    background-color: #212529;
+    background: linear-gradient(90deg, #798598, #60096c);
     color: white;
 }
 footer p {
