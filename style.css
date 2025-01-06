@@ -1,42 +1,49 @@
-/* styles.css */
-
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #121212;
-    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
 }
-
-header .logo {
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-.hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('hero-background.jpg') center center / cover no-repeat;
+header {
+    background: linear-gradient(90deg, #798598, #60096c);
     color: white;
 }
-
-.hero h2 {
-    font-size: 3em;
+.hero {
+    background: url('backImage.jpg') no-repeat center center/cover;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f8f9fa;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
-
-.about,
-.products,
-.services,
-.contact {
-    padding: 60px 0;
+.card {
+    border: none;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
-
-.products .card {
-    margin-bottom: 20px;
-    background-color: #333;
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.btn-primary {
+    background: linear-gradient(90deg, #0d6efd, #6610f2);
     border: none;
 }
-
 footer {
-    background-color: #1a1a1a;
+    background-color: #212529;
+    color: white;
 }
-
 footer p {
     margin: 0;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #798598, #60096c);
+    color: white;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2)
+}
+
+.btn-primary:hover {
+    background: linear-gradient(90deg, #798598, #60096c29);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
 }

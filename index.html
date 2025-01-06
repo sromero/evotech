@@ -6,45 +6,6 @@
     <title>Evotech - Custom App & Hardware Development</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.6;
-            background-color: #f8f9fa;
-        }
-        header {
-            background: linear-gradient(90deg, #0d6efd, #6610f2);
-            color: white;
-        }
-        .hero {
-            background: url('https://images.unsplash.com/photo-1548890126-91461beb4bf1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
-            color: white;
-            min-height: 60vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-        }
-        .card {
-            border: none;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-        .btn-primary {
-            background: linear-gradient(90deg, #0d6efd, #6610f2);
-            border: none;
-        }
-        footer {
-            background-color: #212529;
-            color: white;
-        }
-        footer p {
-            margin: 0;
-        }
-    </style>
 </head>
 <body>
     <!-- Header -->
@@ -97,26 +58,27 @@
     </section>
 
     <!-- Contact Us Section -->
-    <section id="contact" class="contact py-5 bg-light">
-        <div class="container text-center">
-            <h2 class="mb-4">Contáctanos</h2>
-            <form id="contactForm" class="text-left mx-auto" style="max-width: 600px;">
-                <div class="mb-3">
-                    <label for="name" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="name" required>
-                </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">Correo Electrónico</label>
-                    <input type="email" class="form-control" id="email" required>
-                </div>
-                <div class="mb-3">
-                    <label for="message" class="form-label">Mensaje</label>
-                    <textarea class="form-control" id="message" rows="4" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary w-100">Enviar Mensaje</button>
-            </form>
-        </div>
-    </section>
+     <section id="contact" class="contact py-5 bg-light">
+            <div class="container text-center">
+                <h2 class="mb-4">Contáctanos</h2>
+                <form id="contactForm" class="text-left mx-auto" style="max-width: 600px;">
+                     <div class="mb-3">
+                        <label for="name" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="name" name="from_name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="email" name="from_email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Mensaje</label>
+                        <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100" id="submitButton">Enviar Mensaje</button>
+
+                </form>
+            </div>
+        </section>
 
     <!-- Footer -->
     <footer class="py-3">
@@ -127,6 +89,7 @@
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <script src="scripts.js"></script>
+    <script type="text/javascript"  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
