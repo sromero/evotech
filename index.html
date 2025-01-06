@@ -4,12 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Evotech - Custom App & Hardware Development</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            background-color: #f8f9fa;
+        }
+        header {
+            background: linear-gradient(90deg, #0d6efd, #6610f2);
+            color: white;
+        }
+        .hero {
+            background: url('https://via.placeholder.com/1920x600') no-repeat center center/cover;
+            color: white;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        .card {
+            border: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .btn-primary {
+            background: linear-gradient(90deg, #0d6efd, #6610f2);
+            border: none;
+        }
+        footer {
+            background-color: #212529;
+            color: white;
+        }
+        footer p {
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
-    <header class="bg-dark text-white py-3">
+    <header class="py-3 shadow-sm">
         <div class="container d-flex justify-content-between align-items-center">
             <h1 class="logo">Evotech</h1>
             <nav>
@@ -23,22 +62,22 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero bg-primary text-white text-center py-5">
+    <section id="home" class="hero text-center">
         <div class="container">
-            <h2>Bienvenido a Evotech</h2>
-            <p>Desarrollamos aplicaciones personalizadas y prototipos de hardware innovadores para nuestros clientes.</p>
+            <h2 class="display-4 fw-bold">Bienvenido a Evotech</h2>
+            <p class="lead">Desarrollamos aplicaciones personalizadas y prototipos de hardware innovadores para nuestros clientes.</p>
         </div>
     </section>
 
     <!-- Services Section -->
     <section id="services" class="services py-5">
         <div class="container text-center">
-            <h2>Nuestros Servicios</h2>
-            <div class="row mt-4">
+            <h2 class="mb-4">Nuestros Servicios</h2>
+            <div class="row g-4">
                 <!-- Service 1: Desarrollo de Aplicaciones -->
                 <div class="col-md-6">
-                    <div class="card bg-light mb-4">
-                        <div class="card-body">
+                    <div class="card bg-light">
+                        <div class="card-body text-center">
                             <h5 class="card-title">Desarrollo de Aplicaciones Personalizadas</h5>
                             <p class="card-text">Creamos aplicaciones web y móviles a medida utilizando tecnologías modernas como React Native con Expo para satisfacer las necesidades únicas de tu negocio.</p>
                         </div>
@@ -46,8 +85,8 @@
                 </div>
                 <!-- Service 2: Prototipos de Hardware -->
                 <div class="col-md-6">
-                    <div class="card bg-light mb-4">
-                        <div class="card-body">
+                    <div class="card bg-light">
+                        <div class="card-body text-center">
                             <h5 class="card-title">Desarrollo de Prototipos de Hardware</h5>
                             <p class="card-text">Diseñamos y construimos prototipos de hardware personalizados para proyectos innovadores, garantizando una solución completa y funcional.</p>
                         </div>
@@ -58,38 +97,36 @@
     </section>
 
     <!-- Contact Us Section -->
-    <section id="contact" class="contact py-5 bg-dark text-white">
+    <section id="contact" class="contact py-5 bg-light">
         <div class="container text-center">
-            <h2>Contáctanos</h2>
+            <h2 class="mb-4">Contáctanos</h2>
             <form id="contactForm" class="text-left mx-auto" style="max-width: 600px;">
-                <div class="form-group">
-                    <label for="name">Nombre</label>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nombre</label>
                     <input type="text" class="form-control" id="name" required>
                 </div>
-                <div class="form-group">
-                    <label for="email">Correo Electrónico</label>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Correo Electrónico</label>
                     <input type="email" class="form-control" id="email" required>
                 </div>
-                <div class="form-group">
-                    <label for="message">Mensaje</label>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Mensaje</label>
                     <textarea class="form-control" id="message" rows="4" required></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                <button type="submit" class="btn btn-primary w-100">Enviar Mensaje</button>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-3">
+    <footer class="py-3">
         <div class="container text-center">
             <p>&copy; 2024 Evotech. Todos los derechos reservados.</p>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="scripts.js"></script>
 </body>
 </html>
